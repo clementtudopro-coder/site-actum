@@ -8,7 +8,7 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 
 // Adresse de réception des messages du formulaire.
-const DESTINATAIRE = 'clementtudo.pro@gmail.com';
+const DESTINATAIRE = 'clement@actum-conseils.fr';
 const LONGUEUR_MAX_CHAMP_COURT = 200;
 const LONGUEUR_MAX_MESSAGE = 4000;
 

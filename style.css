@@ -215,6 +215,10 @@ section { padding: 110px 0; border-top: 1px solid var(--bordure); }
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+#difference .grille-services {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .service {
   display: flex;
   gap: 20px;
@@ -362,7 +366,7 @@ footer .liens-bas a:hover { color: var(--or); }
   }
   .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
   .grille-approche { grid-template-columns: repeat(2, 1fr); }
-  .grille-services { grid-template-columns: 1fr; }
+  .grille-services, #difference .grille-services { grid-template-columns: 1fr; }
   .valeurs { grid-template-columns: 1fr; }
   section { padding: 72px 0; }
 }
