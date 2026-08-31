@@ -1,0 +1,18 @@
+# Site vitrine statique + un seul script PHP (contact.php) — pas de données
+# sensibles à protéger ici, juste les bases d'hygiène.
+
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# À activer une fois le certificat HTTPS confirmé actif sur ce domaine
+# (ne pas décommenter avant, sous peine de rendre le site inaccessible) :
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>

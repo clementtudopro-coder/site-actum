@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — ACTUM</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .legal { padding: 140px 0 80px; max-width: 760px; margin: 0 auto; }
+  .legal h1 { margin-bottom: 32px; }
+  .legal h2 { font-size: 1.15rem; margin-top: 36px; }
+  .legal p, .legal li { color: var(--texte-att); }
+  .legal mark { background: none; color: var(--or); }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a href="index.html#accueil" class="logo">ACT<span>U</span>M</a>
+  </div>
+</header>
+
+<div class="conteneur legal">
+  <h1>Mentions légales</h1>
+
+  <h2>Éditeur du site</h2>
+  <p>
+    <mark>[Nom / raison sociale à compléter]</mark> — Clément Tudo<br>
+    Statut : <mark>[ex. entrepreneur individuel / SASU — à compléter]</mark><br>
+    SIRET : <mark>[à compléter]</mark><br>
+    Adresse : <mark>[à compléter]</mark>, Île-de-France, France<br>
+    Email : <a href="mailto:clementtudo.pro@gmail.com">clementtudo.pro@gmail.com</a><br>
+    Directeur de la publication : Clément Tudo
+  </p>
+
+  <h2>Hébergement</h2>
+  <p>
+    o2switch — SAS au capital de 100 000 €<br>
+    222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France
+  </p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>L'ensemble des contenus présents sur ce site (textes, mise en forme, éléments graphiques) est la propriété de Clément Tudo, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p>
+
+  <h2>Données personnelles</h2>
+  <p>Les informations transmises via le formulaire de contact (nom, email, entreprise, message) sont utilisées uniquement pour répondre à votre demande, par email. Elles ne sont ni stockées sur un serveur, ni transmises à un tiers, ni utilisées à des fins commerciales. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant — contactez <a href="mailto:clementtudo.pro@gmail.com">clementtudo.pro@gmail.com</a>.</p>
+
+  <h2>Cookies</h2>
+  <p>Ce site ne dépose aucun cookie de suivi ou de mesure d'audience.</p>
+</div>
+
+<footer>
+  <div class="conteneur">
+    <p>© <span id="annee"></span> Clément Tudo — ACTUM. Tous droits réservés.</p>
+    <div class="liens-bas"><a href="index.html#accueil">Retour au site</a></div>
+  </div>
+</footer>
+<script>document.getElementById("annee").textContent = new Date().getFullYear();</script>
+</body>
+</html>
