@@ -155,6 +155,17 @@ nav.nav-liens a:hover { color: var(--texte); }
   gap: 16px;
   margin-top: 32px;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+.cta-groupe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.cta-note {
+  font-size: 0.85rem;
+  color: var(--texte-att);
 }
 .hero-photo {
   position: relative;
@@ -208,6 +219,61 @@ section { padding: 110px 0; border-top: 1px solid var(--bordure); }
 }
 .carte h3 { font-size: 1.1rem; color: var(--texte); }
 .carte p { font-size: 0.95rem; margin: 0; }
+
+.approche-cta {
+  text-align: center;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Tableau comparatif --- */
+.tableau-comparatif-wrap { overflow-x: auto; }
+.tableau-comparatif {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+.tableau-comparatif th, .tableau-comparatif td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--bordure);
+  font-size: 0.95rem;
+  vertical-align: top;
+}
+.tableau-comparatif thead th {
+  color: var(--texte-att);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.tableau-comparatif tbody td:first-child {
+  color: var(--texte-att);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.tableau-comparatif tbody td:nth-child(2),
+.tableau-comparatif thead th:nth-child(2) {
+  color: var(--texte);
+  background: rgba(201, 161, 90, 0.06);
+  border-left: 2px solid var(--or);
+}
+.tableau-comparatif tbody td:nth-child(3) {
+  color: var(--texte-att);
+}
+.tableau-note {
+  margin-top: 24px;
+  font-size: 0.88rem;
+}
+.placeholder,
+.chiffre .valeur.placeholder {
+  color: var(--erreur);
+  font-style: italic;
+  font-weight: 400;
+}
 
 /* --- Services --- */
 .grille-services {
@@ -289,6 +355,18 @@ section { padding: 110px 0; border-top: 1px solid var(--bordure); }
   gap: 60px;
 }
 .contact-infos h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 28px 0;
+}
+.form-alt-label {
+  font-size: 0.85rem;
+  color: var(--texte-att);
+  margin: 0 0 16px;
+}
 .liste-contact { list-style: none; padding: 0; margin: 28px 0 0; }
 .liste-contact li {
   display: flex; align-items: center; gap: 12px;

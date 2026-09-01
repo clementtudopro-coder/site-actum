@@ -15,4 +15,8 @@ Destiné à `actum-conseils.fr` (domaine racine), séparé de `app.actum-conseil
 
 ## Déploiement
 
-Pas encore configuré. À faire sur le même modèle que les autres projets sur ce compte (dépôt git dédié, clé SSH dédiée, cPanel Git Version Control) — vérifier d'abord le dossier racine réel du domaine `actum-conseils.fr` dans cPanel avant de configurer le déploiement, ne pas supposer qu'il s'agit de `/public_html`.
+Configuré : dépôt GitHub `clementtudopro-coder/site-actum`, cloné côté serveur dans `/home/tucl9724/repositories/site-actum` via une clé SSH dédiée (`~/.ssh/id_ed25519_site_actum` sur le serveur, alias `github-site-actum.deploy`). `.cpanel.yml` fait un rsync vers `/home/tucl9724/public_html` — c'est bien la racine du domaine `actum-conseils.fr` (vérifié dans cPanel : le domaine partage `/public_html` avec le domaine principal du compte).
+
+Comme pour `app.actum-conseils.fr`, chaque "Deploy HEAD Commit" réinitialise les permissions de `/public_html` à 700 (bug cPanel connu), ce qui casse la lecture du `.htaccess` → 403. Un cron (`*/5 * * * * chmod 755 /home/tucl9724/public_html`) corrige ça automatiquement sous 5 min ; en cas d'urgence, lancer le chmod à la main via le Terminal cPanel juste après un déploiement.
+
+**HTTPS** : `actum-conseils.fr` et `app.actum-conseils.fr` sont tous les deux encore sur le certificat auto-signé par défaut de cPanel (AutoSSL n'a pas encore émis de certificat Let's Encrypt réel) — rien côté code ou config de ce dépôt n'en est la cause. Le `.htaccess` laisse la redirection forcée vers HTTPS commentée tant que ce n'est pas résolu, pour ne pas rendre le site inaccessible.
