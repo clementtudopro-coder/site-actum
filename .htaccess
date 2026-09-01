@@ -9,10 +9,10 @@ Options -Indexes
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# À activer une fois le certificat HTTPS confirmé actif sur ce domaine
-# (ne pas décommenter avant, sous peine de rendre le site inaccessible) :
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTPS} off
-#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
+# Certificat HTTPS confirmé actif sur ce domaine (1er septembre 2026) —
+# redirection HTTP -> HTTPS activée.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
