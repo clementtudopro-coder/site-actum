@@ -75,6 +75,10 @@ nav.nav-liens a {
   letter-spacing: 0.02em;
 }
 nav.nav-liens a:hover { color: var(--texte); }
+.nav-liens .btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
 
 .btn {
   display: inline-block;
@@ -220,6 +224,10 @@ section { padding: 110px 0; border-top: 1px solid var(--bordure); }
 .carte h3 { font-size: 1.1rem; color: var(--texte); }
 .carte p { font-size: 0.95rem; margin: 0; }
 
+#demarrage .grille-approche {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .approche-cta {
   text-align: center;
   margin-top: 48px;
@@ -267,6 +275,30 @@ section { padding: 110px 0; border-top: 1px solid var(--bordure); }
 .tableau-note {
   margin-top: 24px;
   font-size: 0.88rem;
+}
+.secteurs-bloc { margin-top: 32px; }
+.secteurs-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texte-att);
+  margin-bottom: 14px;
+}
+.secteurs-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.secteur-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--or);
+  border: 1px solid var(--bordure);
+  padding: 6px 14px;
+  border-radius: 999px;
 }
 .placeholder,
 .chiffre .valeur.placeholder {
@@ -444,6 +476,7 @@ footer .liens-bas a:hover { color: var(--or); }
   }
   .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
   .grille-approche { grid-template-columns: repeat(2, 1fr); }
+  #demarrage .grille-approche { grid-template-columns: 1fr; }
   .grille-services, #difference .grille-services { grid-template-columns: 1fr; }
   .valeurs { grid-template-columns: 1fr; }
   section { padding: 72px 0; }
@@ -462,3 +495,9 @@ body.menu-ouvert .nav-mobile { display: flex; }
   z-index: 99;
 }
 .nav-mobile a { color: var(--texte); font-size: 1.05rem; }
+.nav-mobile a.btn {
+  display: inline-block;
+  align-self: flex-start;
+  color: var(--or);
+  font-size: 0.95rem;
+}

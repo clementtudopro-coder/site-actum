@@ -2,3 +2,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tucl9724/public_html/
     - /bin/rsync -a --exclude='.git' --exclude='.cpanel.yml' ./ $DEPLOYPATH
+    - /bin/chmod 755 $DEPLOYPATH
